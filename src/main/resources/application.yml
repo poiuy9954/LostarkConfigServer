@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: LostarkConfigServer
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${CONFIG_SERVER_GIT_URI}
+          ignore-local-ssh-settings: true
+          search-paths: lostark-config
+          private-key: ${CONFIG_SERVER_PRIVATE_KEY}
+        encrypt:
+          enabled: true
+
+server:
+  port: 8888
+
+encrypt:
+  key: ${CONFIG_SERVER_ENCRYPT_KEY}
+
+logging:
+  level:
+    root: info
