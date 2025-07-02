@@ -9,16 +9,16 @@ spring:
           username: ${CONFIG_SERVER_GIT_USERNAME}
           password: ${CONFIG_SERVER_GIT_TOKEN}
           search-paths: lostark-config
-          encrypt:
-            enabled: true
+        encrypt:
+          enabled: true
+encrypt:
+  key: ${CONFIG_SERVER_ENCRYPT_KEY}
+
   profiles:
     active: ${SPRING_PROFILES_ACTIVE:local}
 
 server:
   port: 8888
-
-encrypt:
-  key: ${CONFIG_SERVER_ENCRYPT_KEY}
 
 # Logback 설정은 logback-spring.xml에서 관리
 logging:
