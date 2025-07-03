@@ -39,3 +39,12 @@ out/
 ### Logs ###
 logs/
 *.log
+
+### Environment Variables (Security) ###
+.env
+.env.local
+.env.production
+set-env-actual.sh
+set-env-actual.bat
+
+Claude.md
